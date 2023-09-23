@@ -92,7 +92,7 @@ namespace MovieTheaterManagementSystem.UI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //修改商品
+            //修改電影資訊
             if ((txtTitle.Text != "") && (txtGenre.Text != "") && (txtDirector.Text != "") && (txtLength.Text != "") && (txtTrailerURL.Text != "") && (pictureBoxPoster.Image != null))
             {
                 if (edit == true)

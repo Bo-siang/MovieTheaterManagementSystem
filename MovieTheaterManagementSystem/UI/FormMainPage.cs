@@ -53,7 +53,6 @@ namespace MovieTheaterManagementSystem.UI
                 btnManageStaff.Visible = false;
             }
 
-
             setTop3();
             initBrowser(top1_url, top2_url, top3_url);
         }
@@ -94,9 +93,9 @@ namespace MovieTheaterManagementSystem.UI
         public async void initBrowser(string top1_url, string top2_url, string top3_url)
         {
             await initiated();
-            webView21.CoreWebView2.Navigate(top1_url);
-            webView22.CoreWebView2.Navigate(top2_url);
-            webView23.CoreWebView2.Navigate(top3_url);
+            webView21.CoreWebView2.Navigate(SharedInfo.dirname + top1_url);
+            webView22.CoreWebView2.Navigate(SharedInfo.dirname + top2_url);
+            webView23.CoreWebView2.Navigate(SharedInfo.dirname + top3_url);
         }
 
         private async Task initiated()

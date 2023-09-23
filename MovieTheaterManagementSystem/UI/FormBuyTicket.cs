@@ -15,11 +15,11 @@ namespace MovieTheaterManagementSystem.UI
     {
         SqlConnection con = new SqlConnection(Properties.Settings.Default.MovieTheaterManagementConnectionString);
         SqlCommand cmd;
-        int movieID, scheduleID, totalPrice;
+        int movieID, scheduleID;
         string trailer_url, selectedDate;
-        List<int> seatStatus = new List<int>();
-        List<Button> seatBtn = new List<Button>();
-        List<String> selectedSeat = new List<string>();
+        List<int> seatStatus = new List<int>(); // 儲存該場次的位置狀態
+        List<Button> seatBtn = new List<Button>(); // 對應seatStatus的索引，以控制按鈕顏色、停用或不停用
+        List<String> selectedSeat = new List<string>(); // 用於 1. 確認劃位數是否跟票種輸入框的總和一致、2. 顯示在購票表中的所選座位欄位(以逗號隔開)、3. 更新場次座位狀態表中的座位(1代表被選走了)
 
 
         public FormBuyTicket(int movie_id, DateTime selected_date)
@@ -42,7 +42,35 @@ namespace MovieTheaterManagementSystem.UI
             defaultTextBox();
         }
 
-        private void defaultTextBox() //將四種票數皆設為0
+        // 利用movie_id搜尋預告片檔案位置，並設定給trailer_url變數
+        private void setTrailerURL() 
+        {
+            con.Open();
+            string strSQL = $"select trailer_url from movie where movie_id = {movieID};";
+            cmd = new SqlCommand(strSQL, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read() == true)
+            {
+                trailer_url = reader["trailer_url"].ToString();
+            }
+            reader.Close();
+            con.Close();
+        }
+
+        public async void initBrowser(string url)
+        {
+            await initiated();
+            webView2Trailer.CoreWebView2.Navigate(SharedInfo.dirname + url);
+        }
+
+        private async Task initiated()
+        {
+            await webView2Trailer.EnsureCoreWebView2Async(null);
+        }
+
+        //將四種票數皆設為0
+        private void defaultTextBox() 
         {
             txtAdults.Text = 0.ToString();
             txtElders.Text = 0.ToString();
@@ -50,10 +78,9 @@ namespace MovieTheaterManagementSystem.UI
             txtStudents.Text = 0.ToString();
         }
 
-
+        //依據使用者所選的電影(id)、場次時間、hall_id，查出schesule_id，並顯示出此schedule_id的位置狀況(按鈕)
         private void comboBoxShowingTime_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //依據使用者所選的日期、電影、場次時間、hall_id，查出schesule_id，並顯示出此schedule_id的位置狀況(按鈕)
             con.Open();
             string strSQL = $"select schedule_id from schedule where movie_id = {movieID} and hall_id = '{comboBoxShowingTime.SelectedItem.ToString().Substring(6, 4)}' and convert(char(16), showing_time, 120) like '{selectedDate} {comboBoxShowingTime.SelectedItem.ToString().Substring(0, 5)}';";
             cmd = new SqlCommand(strSQL, con);
@@ -170,20 +197,7 @@ namespace MovieTheaterManagementSystem.UI
             con.Close();
         }
 
-        private void setTrailerURL() 
-        {
-            con.Open();
-            string strSQL = $"select trailer_url from movie where movie_id = {movieID};";
-            cmd = new SqlCommand(strSQL, con);
-            SqlDataReader reader = cmd.ExecuteReader();
 
-            while (reader.Read() == true)
-            {
-                trailer_url = reader["trailer_url"].ToString();
-            }
-            reader.Close();
-            con.Close();
-        }
 
         private void lblChooseOtherMovie_Click(object sender, EventArgs e)
         {
@@ -193,10 +207,6 @@ namespace MovieTheaterManagementSystem.UI
             this.Hide();
         }
 
-        private async Task initiated()
-        {
-            await webView2Trailer.EnsureCoreWebView2Async(null);
-        }
 
         private void txtAdults_KeyPress(object sender, KeyPressEventArgs e) //限制使用者只能輸入10進位數字
         {
@@ -247,13 +257,8 @@ namespace MovieTheaterManagementSystem.UI
             }
         }
 
-        public async void initBrowser(string url)
-        {
-            await initiated();
-            webView2Trailer.CoreWebView2.Navigate(url);
-        }
-
-        private void dealWithNull() //防止使用者刪掉預設值0，導致空值所致的int轉型錯誤
+        //防止使用者刪掉預設值0，導致空值所致的int轉型錯誤
+        private void dealWithNull() 
         {
             if (txtAdults.Text == "")
             {
@@ -282,7 +287,7 @@ namespace MovieTheaterManagementSystem.UI
             }
             dealWithNull();
             int ticketNum = Convert.ToInt32(txtAdults.Text) + Convert.ToInt32(txtElders.Text) + Convert.ToInt32(txtStudents.Text) + Convert.ToInt32(txtChildren.Text);
-            calculatePrice();
+            int totalPrice = calculatePrice();
             if (ticketNum == selectedSeat.Count())
             {
                 string SeatToDB = "";
@@ -320,7 +325,8 @@ namespace MovieTheaterManagementSystem.UI
             }
         }
 
-        private void updateDBSeatStatus() //電影票訂單送出後更新該場次於資料庫的座位狀態
+        //電影票訂單送出後更新該場次於資料庫的座位狀態
+        private void updateDBSeatStatus() 
         {
             con.Open();
             foreach (string seat in selectedSeat)
@@ -333,9 +339,9 @@ namespace MovieTheaterManagementSystem.UI
             con.Close();
         }
 
-        private void calculatePrice()
+        private int calculatePrice()
         {
-            totalPrice = Convert.ToInt32(txtAdults.Text) * 1800 + Convert.ToInt32(txtElders.Text) * 1100 + Convert.ToInt32(txtStudents.Text) * 1300 + Convert.ToInt32(txtChildren.Text) * 1000;
+            return Convert.ToInt32(txtAdults.Text) * 1800 + Convert.ToInt32(txtElders.Text) * 1100 + Convert.ToInt32(txtStudents.Text) * 1300 + Convert.ToInt32(txtChildren.Text) * 1000;
         }
     }
 }

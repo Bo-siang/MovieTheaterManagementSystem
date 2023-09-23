@@ -111,7 +111,7 @@ namespace MovieTheaterManagementSystem.UI
             this.label1.ForeColor = System.Drawing.Color.Aqua;
             this.label1.Location = new System.Drawing.Point(27, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 31);
+            this.label1.Size = new System.Drawing.Size(59, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "時間";
             // 
@@ -122,7 +122,7 @@ namespace MovieTheaterManagementSystem.UI
             this.label2.ForeColor = System.Drawing.Color.Aqua;
             this.label2.Location = new System.Drawing.Point(27, 149);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 31);
+            this.label2.Size = new System.Drawing.Size(59, 29);
             this.label2.TabIndex = 12;
             this.label2.Text = "座席";
             // 
@@ -134,7 +134,7 @@ namespace MovieTheaterManagementSystem.UI
             this.label3.ForeColor = System.Drawing.Color.Aqua;
             this.label3.Location = new System.Drawing.Point(31, 410);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 31);
+            this.label3.Size = new System.Drawing.Size(128, 29);
             this.label3.TabIndex = 13;
             this.label3.Text = "券種．枚数";
             // 
@@ -285,7 +285,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnC5.BackColor = System.Drawing.Color.Green;
             this.btnC5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnC5.Location = new System.Drawing.Point(459, 336);
-            this.btnC5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnC5.Margin = new System.Windows.Forms.Padding(4);
             this.btnC5.Name = "btnC5";
             this.btnC5.Size = new System.Drawing.Size(53, 40);
             this.btnC5.TabIndex = 42;
@@ -299,7 +299,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnC4.BackColor = System.Drawing.Color.Green;
             this.btnC4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnC4.Location = new System.Drawing.Point(376, 336);
-            this.btnC4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnC4.Margin = new System.Windows.Forms.Padding(4);
             this.btnC4.Name = "btnC4";
             this.btnC4.Size = new System.Drawing.Size(53, 40);
             this.btnC4.TabIndex = 41;
@@ -313,7 +313,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnC3.BackColor = System.Drawing.Color.Green;
             this.btnC3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnC3.Location = new System.Drawing.Point(296, 336);
-            this.btnC3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnC3.Margin = new System.Windows.Forms.Padding(4);
             this.btnC3.Name = "btnC3";
             this.btnC3.Size = new System.Drawing.Size(53, 40);
             this.btnC3.TabIndex = 40;
@@ -327,7 +327,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnC2.BackColor = System.Drawing.Color.Green;
             this.btnC2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnC2.Location = new System.Drawing.Point(216, 336);
-            this.btnC2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnC2.Margin = new System.Windows.Forms.Padding(4);
             this.btnC2.Name = "btnC2";
             this.btnC2.Size = new System.Drawing.Size(53, 40);
             this.btnC2.TabIndex = 39;
@@ -341,7 +341,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnB5.BackColor = System.Drawing.Color.Green;
             this.btnB5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnB5.Location = new System.Drawing.Point(459, 274);
-            this.btnB5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnB5.Margin = new System.Windows.Forms.Padding(4);
             this.btnB5.Name = "btnB5";
             this.btnB5.Size = new System.Drawing.Size(53, 40);
             this.btnB5.TabIndex = 38;
@@ -355,7 +355,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnB4.BackColor = System.Drawing.Color.Green;
             this.btnB4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnB4.Location = new System.Drawing.Point(376, 274);
-            this.btnB4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnB4.Margin = new System.Windows.Forms.Padding(4);
             this.btnB4.Name = "btnB4";
             this.btnB4.Size = new System.Drawing.Size(53, 40);
             this.btnB4.TabIndex = 37;
@@ -369,7 +369,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnB3.BackColor = System.Drawing.Color.Green;
             this.btnB3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnB3.Location = new System.Drawing.Point(296, 274);
-            this.btnB3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnB3.Margin = new System.Windows.Forms.Padding(4);
             this.btnB3.Name = "btnB3";
             this.btnB3.Size = new System.Drawing.Size(53, 40);
             this.btnB3.TabIndex = 36;
@@ -383,7 +383,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnB2.BackColor = System.Drawing.Color.Green;
             this.btnB2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnB2.Location = new System.Drawing.Point(216, 274);
-            this.btnB2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnB2.Margin = new System.Windows.Forms.Padding(4);
             this.btnB2.Name = "btnB2";
             this.btnB2.Size = new System.Drawing.Size(53, 40);
             this.btnB2.TabIndex = 35;
@@ -397,7 +397,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnC1.BackColor = System.Drawing.Color.Green;
             this.btnC1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnC1.Location = new System.Drawing.Point(135, 336);
-            this.btnC1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnC1.Margin = new System.Windows.Forms.Padding(4);
             this.btnC1.Name = "btnC1";
             this.btnC1.Size = new System.Drawing.Size(53, 40);
             this.btnC1.TabIndex = 34;
@@ -411,7 +411,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnB1.BackColor = System.Drawing.Color.Green;
             this.btnB1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnB1.Location = new System.Drawing.Point(135, 274);
-            this.btnB1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnB1.Margin = new System.Windows.Forms.Padding(4);
             this.btnB1.Name = "btnB1";
             this.btnB1.Size = new System.Drawing.Size(53, 40);
             this.btnB1.TabIndex = 33;
@@ -425,7 +425,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnA5.BackColor = System.Drawing.Color.Green;
             this.btnA5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnA5.Location = new System.Drawing.Point(459, 214);
-            this.btnA5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnA5.Margin = new System.Windows.Forms.Padding(4);
             this.btnA5.Name = "btnA5";
             this.btnA5.Size = new System.Drawing.Size(53, 40);
             this.btnA5.TabIndex = 32;
@@ -439,7 +439,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnA4.BackColor = System.Drawing.Color.Green;
             this.btnA4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnA4.Location = new System.Drawing.Point(376, 214);
-            this.btnA4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnA4.Margin = new System.Windows.Forms.Padding(4);
             this.btnA4.Name = "btnA4";
             this.btnA4.Size = new System.Drawing.Size(53, 40);
             this.btnA4.TabIndex = 31;
@@ -453,7 +453,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnA3.BackColor = System.Drawing.Color.Green;
             this.btnA3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnA3.Location = new System.Drawing.Point(296, 214);
-            this.btnA3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnA3.Margin = new System.Windows.Forms.Padding(4);
             this.btnA3.Name = "btnA3";
             this.btnA3.Size = new System.Drawing.Size(53, 40);
             this.btnA3.TabIndex = 30;
@@ -467,7 +467,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnA2.BackColor = System.Drawing.Color.Green;
             this.btnA2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnA2.Location = new System.Drawing.Point(216, 214);
-            this.btnA2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnA2.Margin = new System.Windows.Forms.Padding(4);
             this.btnA2.Name = "btnA2";
             this.btnA2.Size = new System.Drawing.Size(53, 40);
             this.btnA2.TabIndex = 29;
@@ -481,7 +481,7 @@ namespace MovieTheaterManagementSystem.UI
             this.btnA1.BackColor = System.Drawing.Color.Green;
             this.btnA1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnA1.Location = new System.Drawing.Point(135, 214);
-            this.btnA1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnA1.Margin = new System.Windows.Forms.Padding(4);
             this.btnA1.Name = "btnA1";
             this.btnA1.Size = new System.Drawing.Size(53, 40);
             this.btnA1.TabIndex = 28;
@@ -545,6 +545,7 @@ namespace MovieTheaterManagementSystem.UI
             this.txtStudents.Name = "txtStudents";
             this.txtStudents.Size = new System.Drawing.Size(76, 34);
             this.txtStudents.TabIndex = 23;
+            this.txtStudents.Text = "0";
             this.txtStudents.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudents_KeyPress);
             // 
             // txtElders
@@ -556,6 +557,7 @@ namespace MovieTheaterManagementSystem.UI
             this.txtElders.Name = "txtElders";
             this.txtElders.Size = new System.Drawing.Size(76, 34);
             this.txtElders.TabIndex = 22;
+            this.txtElders.Text = "0";
             this.txtElders.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtElders_KeyPress);
             // 
             // txtChildren
@@ -567,6 +569,7 @@ namespace MovieTheaterManagementSystem.UI
             this.txtChildren.Name = "txtChildren";
             this.txtChildren.Size = new System.Drawing.Size(76, 34);
             this.txtChildren.TabIndex = 21;
+            this.txtChildren.Text = "0";
             this.txtChildren.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtChildren_KeyPress);
             // 
             // txtAdults
@@ -578,6 +581,7 @@ namespace MovieTheaterManagementSystem.UI
             this.txtAdults.Name = "txtAdults";
             this.txtAdults.Size = new System.Drawing.Size(76, 34);
             this.txtAdults.TabIndex = 20;
+            this.txtAdults.Text = "0";
             this.txtAdults.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAdults_KeyPress);
             // 
             // pictureBox1

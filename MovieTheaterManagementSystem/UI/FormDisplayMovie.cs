@@ -40,7 +40,7 @@ namespace MovieTheaterManagementSystem.UI
         private void loadMovieOnAir()
         {
             con.Open();
-            string strSQL = "select movie_id, movie_name, poster_url from movie where datediff(day, release_date, @chosen_date) <= 30 and datediff(day, release_date, @chosen_date) >= 0;";
+            string strSQL = "select movie_id, movie_name, poster_url from movie where datediff(day, release_date, @chosen_date) <= 30 and datediff(day, release_date, @chosen_date) >= 0;"; //確認所選的日期晚於上映日
             SqlCommand cmd = new SqlCommand(strSQL, con);
             cmd.Parameters.AddWithValue("@chosen_date", dtpMovieOnAir.Value);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -81,6 +81,7 @@ namespace MovieTheaterManagementSystem.UI
             }
         }
 
+        // 電影海報被點擊時觸發
         private void listViewMovieOnAir_ItemActivate(object sender, EventArgs e)
         {
             int selectedMovieID = (int)listViewMovieOnAir.SelectedItems[0].Tag;
@@ -90,7 +91,7 @@ namespace MovieTheaterManagementSystem.UI
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read() == true)
             {
-                SharedInfo.m_name = reader["movie_name"].ToString();
+                SharedInfo.m_name = reader["movie_name"].ToString(); //將使用者所選的電影名稱存入全域變數
                 //Console.WriteLine(SharedInfo.m_name);
             }
             reader.Close();
