@@ -33,8 +33,15 @@ namespace MovieTheaterManagementSystem.UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainPage));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMove = new System.Windows.Forms.Panel();
+            this.btnManageStaff = new System.Windows.Forms.Button();
+            this.btnManageMember = new System.Windows.Forms.Button();
+            this.btnManageMovie = new System.Windows.Forms.Button();
+            this.btnManageTicket = new System.Windows.Forms.Button();
+            this.btnBuyTicket = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.lblDatetime = new System.Windows.Forms.Label();
             this.lblgreetings = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -44,19 +51,12 @@ namespace MovieTheaterManagementSystem.UI
             this.webView22 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.webView23 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnManageStaff = new System.Windows.Forms.Button();
-            this.btnManageMember = new System.Windows.Forms.Button();
-            this.btnManageMovie = new System.Windows.Forms.Button();
-            this.btnManageTicket = new System.Windows.Forms.Button();
-            this.btnBuyTicket = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,148 +85,6 @@ namespace MovieTheaterManagementSystem.UI
             this.pnlMove.Name = "pnlMove";
             this.pnlMove.Size = new System.Drawing.Size(13, 46);
             this.pnlMove.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(364, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 125);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Teal;
-            this.panel3.Controls.Add(this.btnLogOut);
-            this.panel3.Controls.Add(this.lblDatetime);
-            this.panel3.Controls.Add(this.lblgreetings);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(356, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1436, 115);
-            this.panel3.TabIndex = 1;
-            // 
-            // lblDatetime
-            // 
-            this.lblDatetime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDatetime.AutoSize = true;
-            this.lblDatetime.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblDatetime.ForeColor = System.Drawing.Color.White;
-            this.lblDatetime.Location = new System.Drawing.Point(1181, 75);
-            this.lblDatetime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatetime.Name = "lblDatetime";
-            this.lblDatetime.Size = new System.Drawing.Size(92, 25);
-            this.lblDatetime.TabIndex = 1;
-            this.lblDatetime.Text = "現在時刻";
-            // 
-            // lblgreetings
-            // 
-            this.lblgreetings.AutoSize = true;
-            this.lblgreetings.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblgreetings.ForeColor = System.Drawing.Color.White;
-            this.lblgreetings.Location = new System.Drawing.Point(107, 30);
-            this.lblgreetings.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblgreetings.Name = "lblgreetings";
-            this.lblgreetings.Size = new System.Drawing.Size(254, 31);
-            this.lblgreetings.TabIndex = 0;
-            this.lblgreetings.Text = "ようこそ：ユーザー様";
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // lblTop1
-            // 
-            this.lblTop1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTop1.AutoSize = true;
-            this.lblTop1.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblTop1.ForeColor = System.Drawing.Color.Gold;
-            this.lblTop1.Location = new System.Drawing.Point(451, 144);
-            this.lblTop1.Name = "lblTop1";
-            this.lblTop1.Size = new System.Drawing.Size(110, 31);
-            this.lblTop1.TabIndex = 3;
-            this.lblTop1.Text = "ヒット１";
-            // 
-            // lblTop2
-            // 
-            this.lblTop2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTop2.AutoSize = true;
-            this.lblTop2.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblTop2.ForeColor = System.Drawing.Color.Gold;
-            this.lblTop2.Location = new System.Drawing.Point(451, 499);
-            this.lblTop2.Name = "lblTop2";
-            this.lblTop2.Size = new System.Drawing.Size(110, 31);
-            this.lblTop2.TabIndex = 6;
-            this.lblTop2.Text = "ヒット２";
-            // 
-            // lblTop3
-            // 
-            this.lblTop3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTop3.AutoSize = true;
-            this.lblTop3.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblTop3.ForeColor = System.Drawing.Color.Gold;
-            this.lblTop3.Location = new System.Drawing.Point(1083, 300);
-            this.lblTop3.Name = "lblTop3";
-            this.lblTop3.Size = new System.Drawing.Size(110, 31);
-            this.lblTop3.TabIndex = 7;
-            this.lblTop3.Text = "ヒット３";
-            // 
-            // webView22
-            // 
-            this.webView22.AllowExternalDrop = true;
-            this.webView22.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.webView22.CreationProperties = null;
-            this.webView22.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView22.Location = new System.Drawing.Point(429, 547);
-            this.webView22.Name = "webView22";
-            this.webView22.Size = new System.Drawing.Size(615, 285);
-            this.webView22.TabIndex = 9;
-            this.webView22.ZoomFactor = 1D;
-            // 
-            // webView23
-            // 
-            this.webView23.AllowExternalDrop = true;
-            this.webView23.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.webView23.CreationProperties = null;
-            this.webView23.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView23.Location = new System.Drawing.Point(1073, 356);
-            this.webView23.Name = "webView23";
-            this.webView23.Size = new System.Drawing.Size(615, 285);
-            this.webView23.TabIndex = 10;
-            this.webView23.ZoomFactor = 1D;
-            // 
-            // webView21
-            // 
-            this.webView21.AllowExternalDrop = true;
-            this.webView21.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(429, 193);
-            this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(615, 285);
-            this.webView21.TabIndex = 11;
-            this.webView21.ZoomFactor = 1D;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.White;
-            this.btnLogOut.Image = global::MovieTheaterManagementSystem.Properties.Resources.logout;
-            this.btnLogOut.Location = new System.Drawing.Point(1099, 20);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(224, 51);
-            this.btnLogOut.TabIndex = 9;
-            this.btnLogOut.Text = "  ログアウト";
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnManageStaff
             // 
@@ -324,6 +182,149 @@ namespace MovieTheaterManagementSystem.UI
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(364, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 125);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Teal;
+            this.panel3.Controls.Add(this.btnLogOut);
+            this.panel3.Controls.Add(this.lblDatetime);
+            this.panel3.Controls.Add(this.lblgreetings);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(356, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1436, 115);
+            this.panel3.TabIndex = 1;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.Image = global::MovieTheaterManagementSystem.Properties.Resources.logout;
+            this.btnLogOut.Location = new System.Drawing.Point(1099, 20);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(224, 51);
+            this.btnLogOut.TabIndex = 9;
+            this.btnLogOut.Text = "  ログアウト";
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // lblDatetime
+            // 
+            this.lblDatetime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDatetime.AutoSize = true;
+            this.lblDatetime.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblDatetime.ForeColor = System.Drawing.Color.White;
+            this.lblDatetime.Location = new System.Drawing.Point(1181, 75);
+            this.lblDatetime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatetime.Name = "lblDatetime";
+            this.lblDatetime.Size = new System.Drawing.Size(92, 25);
+            this.lblDatetime.TabIndex = 1;
+            this.lblDatetime.Text = "現在時刻";
+            // 
+            // lblgreetings
+            // 
+            this.lblgreetings.AutoSize = true;
+            this.lblgreetings.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblgreetings.ForeColor = System.Drawing.Color.White;
+            this.lblgreetings.Location = new System.Drawing.Point(107, 30);
+            this.lblgreetings.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblgreetings.Name = "lblgreetings";
+            this.lblgreetings.Size = new System.Drawing.Size(254, 31);
+            this.lblgreetings.TabIndex = 0;
+            this.lblgreetings.Text = "ようこそ：ユーザー様";
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // lblTop1
+            // 
+            this.lblTop1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTop1.AutoSize = true;
+            this.lblTop1.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblTop1.ForeColor = System.Drawing.Color.Gold;
+            this.lblTop1.Location = new System.Drawing.Point(451, 144);
+            this.lblTop1.Name = "lblTop1";
+            this.lblTop1.Size = new System.Drawing.Size(105, 29);
+            this.lblTop1.TabIndex = 3;
+            this.lblTop1.Text = "ヒット１";
+            // 
+            // lblTop2
+            // 
+            this.lblTop2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTop2.AutoSize = true;
+            this.lblTop2.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblTop2.ForeColor = System.Drawing.Color.Gold;
+            this.lblTop2.Location = new System.Drawing.Point(451, 499);
+            this.lblTop2.Name = "lblTop2";
+            this.lblTop2.Size = new System.Drawing.Size(105, 29);
+            this.lblTop2.TabIndex = 6;
+            this.lblTop2.Text = "ヒット２";
+            // 
+            // lblTop3
+            // 
+            this.lblTop3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTop3.AutoSize = true;
+            this.lblTop3.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblTop3.ForeColor = System.Drawing.Color.Gold;
+            this.lblTop3.Location = new System.Drawing.Point(1083, 300);
+            this.lblTop3.Name = "lblTop3";
+            this.lblTop3.Size = new System.Drawing.Size(105, 29);
+            this.lblTop3.TabIndex = 7;
+            this.lblTop3.Text = "ヒット３";
+            // 
+            // webView22
+            // 
+            this.webView22.AllowExternalDrop = true;
+            this.webView22.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.webView22.CreationProperties = null;
+            this.webView22.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView22.Location = new System.Drawing.Point(429, 547);
+            this.webView22.Name = "webView22";
+            this.webView22.Size = new System.Drawing.Size(615, 285);
+            this.webView22.TabIndex = 9;
+            this.webView22.ZoomFactor = 1D;
+            // 
+            // webView23
+            // 
+            this.webView23.AllowExternalDrop = true;
+            this.webView23.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.webView23.CreationProperties = null;
+            this.webView23.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView23.Location = new System.Drawing.Point(1073, 356);
+            this.webView23.Name = "webView23";
+            this.webView23.Size = new System.Drawing.Size(615, 285);
+            this.webView23.TabIndex = 10;
+            this.webView23.ZoomFactor = 1D;
+            // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Location = new System.Drawing.Point(429, 193);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(615, 285);
+            this.webView21.TabIndex = 11;
+            this.webView21.ZoomFactor = 1D;
+            this.webView21.Click += new System.EventHandler(this.webView21_Click);
+            // 
             // FormMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -345,12 +346,12 @@ namespace MovieTheaterManagementSystem.UI
             this.Text = "メインページ";
             this.Load += new System.EventHandler(this.FormMainPage_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webView22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

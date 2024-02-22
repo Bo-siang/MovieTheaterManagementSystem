@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,9 +80,9 @@ namespace MovieTheaterManagementSystem.UI
                 temp_titles.Add(reader["movie_name"].ToString());
                 temp_urls.Add(reader["trailer_url"].ToString());
             }
-            top1_url = temp_urls[0];
-            top2_url = temp_urls[1];
-            top3_url = temp_urls[2];
+            top1_url = SharedInfo.dirname + temp_urls[0];
+            top2_url = SharedInfo.dirname + temp_urls[1];
+            top3_url = SharedInfo.dirname + temp_urls[2];
             lblTop1.Text = temp_titles[0];
             lblTop2.Text = temp_titles[1];
             lblTop3.Text = temp_titles[2];
@@ -93,9 +94,9 @@ namespace MovieTheaterManagementSystem.UI
         public async void initBrowser(string top1_url, string top2_url, string top3_url)
         {
             await initiated();
-            webView21.CoreWebView2.Navigate(SharedInfo.dirname + top1_url);
-            webView22.CoreWebView2.Navigate(SharedInfo.dirname + top2_url);
-            webView23.CoreWebView2.Navigate(SharedInfo.dirname + top3_url);
+            webView21.CoreWebView2.Navigate(top1_url);
+            webView22.CoreWebView2.Navigate(top2_url);
+            webView23.CoreWebView2.Navigate(top3_url);
         }
 
         private async Task initiated()
@@ -157,6 +158,11 @@ namespace MovieTheaterManagementSystem.UI
             FormManageStaff fms = new FormManageStaff();
             this.Hide();
             fms.Show();
+        }
+
+        private void webView21_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

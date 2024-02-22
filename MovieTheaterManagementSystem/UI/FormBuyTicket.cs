@@ -52,7 +52,7 @@ namespace MovieTheaterManagementSystem.UI
 
             while (reader.Read() == true)
             {
-                trailer_url = reader["trailer_url"].ToString();
+                trailer_url = SharedInfo.dirname + reader["trailer_url"].ToString();
             }
             reader.Close();
             con.Close();
@@ -61,7 +61,7 @@ namespace MovieTheaterManagementSystem.UI
         public async void initBrowser(string url)
         {
             await initiated();
-            webView2Trailer.CoreWebView2.Navigate(SharedInfo.dirname + url);
+            webView2Trailer.CoreWebView2.Navigate(url);
         }
 
         private async Task initiated()

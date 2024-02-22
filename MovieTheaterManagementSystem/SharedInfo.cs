@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,6 @@ namespace MovieTheaterManagementSystem
         public static string u_name = ""; //使用者名稱
         public static string role = "";
         public static string m_name = ""; //電影名稱
-        public static string dirname = @"C:\Users\user\Documents\GitHub\MovieTheaterManagementSystem\PictureVideo\";
+        public static string dirname = @"C:\Users\user\Documents\GitHub\MovieTheaterManagementSystem\PictureVideo\"; // 圖片和影片的所在資料夾
     }
 }
